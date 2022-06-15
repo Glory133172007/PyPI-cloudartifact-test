@@ -28,7 +28,7 @@ jobs:
         # 打包的我们的库/项目
       - name: Packaged Our Libraries/Projects
         run: |
-          python setup.py sdist bdist_wheel
+          python -m build
             
         # 使用twine将打包好的库/项目上传到华为云CloudArtifact PyPI 私仓
       - name: Publish PyPI package 
