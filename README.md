@@ -100,7 +100,8 @@ jobs:
         run: |
           twine upload -r pypi dist/*
 ```   
-详情可参考 ./github/workflows/pypi-cloudartifact-action-publish-demo.yml
+详情可参考 [.github/workflows/pypi-cloudartifact-action-publish-demo.yml](.github/workflows/pypi-cloudartifact-action-publish-demo.yml)
+
 ### 2.pip install: 拉取CloudArtifact PyPI 私仓的PyPI组件  
 步骤说明：  
 (1)代码检出  
@@ -141,4 +142,4 @@ jobs:
         run: |
           pip install <PyPI name>
 ```   
-详情可参考 ./github/workflows/pypi-cloudartifact-action-install-demo.yml
+详情可参考 [.github/workflows/pypi-cloudartifact-action-install-demo.yml](.github/workflows/pypi-cloudartifact-action-install-demo.yml)
