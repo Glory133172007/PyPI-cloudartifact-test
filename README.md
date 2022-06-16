@@ -1,5 +1,5 @@
 # 使用华为云CloudArtifact PyPI 私仓workflows样例
-**本READEME指导是基于[PyPI CloudArtifact Action](https://github.com/huaweicloud/PyPI-cloudartifact-action)使用华为云CloudArtifact PyPI 私仓workflows样例**   
+**本READEME指导是基于[PyPI CloudArtifact Action](https://github.com/marketplace/actions/huaweicloud-pypi-cloudartifact)使用华为云CloudArtifact PyPI 私仓workflows样例**   
   
 私有依赖库(CloudArtifact)是发布服务（[CloudRelease](https://support.huaweicloud.com/cloudrelease/index.html)）的语言软件仓库功能。用于管理私有组件（开发者通俗称之为私服），包括Maven、Npm、Go、PyPI、Rpm等多种仓库格式。   
 使用华为云CloudArtifact PyPI 私仓有如下场景：  
@@ -14,7 +14,7 @@
 > 不是仓库成员或者没有对应权限需要租户帐号、仓库管理员修改为对应的仓库角色。
 
 (3) CloudArtifact PyPI 私仓上传下载账号信息获取  
-[私有依赖库首页](https://devcloud.cn-north-4.huaweicloud.com/cloudartifact/repository)->点击需要的PyPI仓库->右上角操作指导->点击下载配置文件->根据上传或者下载场景，下载对应的配置信息
+[私有依赖库首页](https://devcloud.cn-north-4.huaweicloud.com/cloudartifact/repository)->点击需要的PyPI仓库->右上角操作指导->点击下载配置文件->根据上传或者下载场景，下载对应的配置文件
 ![图一](imgs/pypi-config-download.PNG)
 
 ## 参数说明
