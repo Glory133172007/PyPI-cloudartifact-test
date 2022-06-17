@@ -1,0 +1,9 @@
+version: 2.0
+
+steps:
+  pre_codecheck:
+    - checkout
+
+tool_params:
+  secsolar:  #安全扫描工具
+    source_dir: 

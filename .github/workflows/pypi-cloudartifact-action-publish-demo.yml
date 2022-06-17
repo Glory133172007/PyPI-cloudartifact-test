@@ -1,0 +1,36 @@
+name: PyPI Cloudartifact Action Publish Demo
+on:
+  push:
+    branches:
+       master
+jobs:
+  Publish-to-CloudArtifact-PyPI:
+    runs-on: ubuntu-latest
+    steps:
+        # 代码检出
+      - uses: actions/checkout@v2
+
+        # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本
+      - name: Setup node
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+        # 华为云CloudArtifact PyPI 私仓配置 
+      - name: Setup HuaweiCloud PyPI CloudArtifact
+        uses: huaweicloud/PyPI-cloudartifact-action@v1.0.0
+        with: 
+          pypi-operation-type: upload
+          repository: '<repository URL>'
+          username: ${{ secrets.PyPI_USERNAME }}
+          password: ${{ secrets.PyPI_PASSWORD }}
+
+        # 打包的我们的库/项目
+      - name: Packaged Our Libraries/Projects
+        run: |
+          python -m build
+            
+        # 使用twine将打包好的库/项目上传到华为云CloudArtifact PyPI 私仓
+      - name: Publish PyPI package 
+        run: |
+          twine upload -r pypi dist/*

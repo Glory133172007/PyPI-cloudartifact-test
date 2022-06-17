@@ -1,0 +1,46 @@
+version: 1.0
+name: testdemo
+#  开发语言
+language: python
+#  构建工具
+dependencies:
+   base:
+    python: best
+    jdk: best
+   x86:
+    gcc: 10.2.0
+    
+ 
+    
+#  编译机类型
+machine:
+  standard:   # 虚机构建
+    x86_euler2.9:
+      - default
+ 
+scripts:
+  - python setup.py sdist bdist_wheel
+ 
+#  构建产物
+artifacts:
+    static:
+        - output: dist
+          include:
+              - '*'
+          exclude:
+              - '*.java'
+              - '*.kotlin'
+              - '*.class'
+              - '*.jar'
+              - '*.war'
+              - '*.c'
+              - '*.cpp'
+              - '*.h'
+              - '*.o'
+              - '*.so'
+              - '*.dll'
+              - '*.out'
+              - '*.py'
+              - '*.whl'
+              - '*.go'
+# 这里定义构建时候需要使用的环境变量
