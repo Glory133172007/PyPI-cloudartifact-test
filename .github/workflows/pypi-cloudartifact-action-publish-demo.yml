@@ -21,7 +21,7 @@ jobs:
         uses: huaweicloud/PyPI-cloudartifact-action@v1.0.0
         with: 
           pypi-operation-type: upload
-          repository: '<repository URL>'
+          repository: 'https://devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/pypi/cn-north-4_dfbdbf2e511e40fa88ba1d653358d65c_pypi_0'
           username: ${{ secrets.PyPI_USERNAME }}
           password: ${{ secrets.PyPI_PASSWORD }}
 
