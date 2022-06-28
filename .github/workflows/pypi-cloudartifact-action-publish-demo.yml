@@ -10,7 +10,7 @@ jobs:
         # 代码检出
       - uses: actions/checkout@v2
 
-        # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本
+        # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本.
       - name: Setup node
         uses: actions/setup-python@v4
         with:
