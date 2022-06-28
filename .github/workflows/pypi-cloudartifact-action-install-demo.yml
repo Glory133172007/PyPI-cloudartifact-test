@@ -23,8 +23,8 @@ jobs:
         uses: huaweicloud/PyPI-cloudartifact-action@v1.0.0
         with: 
           pypi-operation-type: install
-          index-url: '<repository URL with authentication>'
-          trusted-host: '<repository URL host>'
+          index-url: '${{ secrets.PyPI_USERNAME }}:${{ secrets.PyPI_PASSWORD }}@https://cn-north-4_dfbdbf2e511e40fa88ba1d653358d65c_09abb9f05c0a4e5d9f2b91500404ed91:%5EfZ0aO%5B92g@devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/pypi/cn-north-4_dfbdbf2e511e40fa88ba1d653358d65c_pypi_0/simple'
+          trusted-host: 'devrepo.devcloud.cn-north-4.huaweicloud.com'
 
         # 推送PyPI package到 CloudArtifact PyPI 私仓  
       - name: Install PyPI package 
