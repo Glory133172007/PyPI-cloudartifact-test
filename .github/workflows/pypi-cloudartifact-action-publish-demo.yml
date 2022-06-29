@@ -2,7 +2,7 @@ name: PyPI Cloudartifact Action Publish Demo
 on:
   push:
     branches:
-       master
+       master1
 jobs:
   Publish-to-CloudArtifact-PyPI:
     runs-on: ubuntu-latest
