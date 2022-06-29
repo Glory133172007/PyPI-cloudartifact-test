@@ -29,4 +29,4 @@ jobs:
         # 推送PyPI package到 CloudArtifact PyPI 私仓  
       - name: Install PyPI package 
         run: |
-          pip install hdn-hello-demo==1.0
+          pip install hdn-hello-demo==1.0 --verbose
