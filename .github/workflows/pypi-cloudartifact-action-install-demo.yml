@@ -10,11 +10,11 @@ jobs:
         # 代码检出
       - uses: actions/checkout@v2
 
-        # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本
-      - name: Setup node
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.8
+#         # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本
+#       - name: Setup node
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: 3.8
 
         # 华为云CloudArtifact PyPI 私仓配置 
         # 从华为云私有库获取的PyPI的index-url:https://{username}:{password}@devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/pypi/cn-north-4_dfbdbf2e511e**********653358d65c_pypi_0/simple
